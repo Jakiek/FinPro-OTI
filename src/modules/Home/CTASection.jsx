@@ -16,7 +16,7 @@ function CTASection() {
               Start using the ToDo-List
             </p>
             <Link
-              to="/todolist"
+              to="/Todo-list"
               className="btn btn-lg bg-white text-primary hover:bg-base-100 border-none shadow-xl hover:shadow-2xl transition-all duration-300 gap-2"
             >
               <CheckSquare className="h-6 w-6" />
