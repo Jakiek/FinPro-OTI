@@ -1,28 +1,25 @@
-import React, { useMemo, useState } from 'react'
+import React from "react";
+import TodoItem from "./TodoItem";
 
-function TodoList() {
-    // todolist= {id,desc,task,date,type}
-    // filter = active & completed
-
-    const [type, setType] = useState("Tasks");
-    const {completed, setCompleted, addCompleted, deleteCompleted} = useCompleted();
-    const [description, setDescription] = useState("");
-    const [task, setTask] = useState("");
-    const [date, setDate] = useState("");
-    const [filter, setFilter] = useState("All");
-  
-    const stats = useMemo(() => {
-        const active = completed
-            .filter((completed) => completed.type === "active")
-            .reduce((sum, completed) => sum + completed.task, 0);
-    
-        const completed = completed
-            .filter((completed) => completed.type === "completed")
-            .reduce((sum, completed) => sum + completed.task, 0);
-
-            const totaltasks = active - completed
-    });
-            return <div>TodoList</div>
+function TodoList({ filteredTodos, toggleTodo, deleteTodo }) {
+  return (
+    <div className="space-y-4 mt-4">
+      {filteredTodos.length > 0 ? (
+        filteredTodos.map((todo) => (
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            toggleTodo={toggleTodo}
+            deleteTodo={deleteTodo}
+          />
+        ))
+      ) : (
+        <div className="text-center p-4 text-base-content/60">
+          No tasks here.
+        </div>
+      )}
+    </div>
+  );
 }
 
-export default TodoList
+export default TodoList;

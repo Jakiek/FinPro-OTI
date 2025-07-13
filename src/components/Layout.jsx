@@ -1,6 +1,7 @@
 import React from 'react'  
 import { Outlet } from 'react-router-dom'
-import Navbar from '../modules/Todo-list/navbar'
+import Navbar from '../modules/Todo-list/Navbar'
+
 
 function Layout() {
   return (

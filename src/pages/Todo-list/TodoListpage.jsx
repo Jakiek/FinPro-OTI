@@ -1,10 +1,12 @@
 import React from 'react'
-import TodoList from '../../modules/Todo-list/TodoList'
+import Todo from '../../modules/Todo-list/Todo'
+import HeaderToDo from '../../modules/Todo-list/HeaderTodo'
 
 function TodoListPage() {
   return (
     <>
-      <TodoList/>
+      <HeaderToDo/>
+      <Todo/>
     </>
   )
 }

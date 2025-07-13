@@ -1,5 +1,5 @@
-import { CheckCheck, CheckSquare2, Home, LucideArchive, LucideCheckSquare2, Menu } from 'lucide-react'
 import React from 'react'
+import { CheckCheck, CheckSquare2, Home, LucideArchive, LucideCheckSquare2, Menu } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {

@@ -1,19 +1,20 @@
-import React from 'react'
+import CTASection from "../../modules/Home/CTASection";
+import Features from "../../modules/Home/Features";
+import Hero from "../../modules/Home/Hero";
 
-function HomePage() {
+
+
+const HomePage = () => {
   return (
-    <section className="h-[90vh] flex flex-col items-center justify-center">
-      <div className="flex flex-col items-center gap-4 max-w-3xl">
-        <h1 className="text-base sm:text-xl md:text-2xl lg:text-4xl font-semibold">
-          Hi,welcome to the HomePage
-        </h1>
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
-          This is a simple home page made by nopek  
-        </p> 
+    <>
+      {/* Hero Section */}
+      <Hero />
+      {/* Features Section */}
+      <Features />
+      {/* CTA Section */}
+      <CTASection />
+    </>
+  );
+};
 
-      </div>
-    </section>
-  )
-}
-
-export default HomePage
+export default HomePage;
